@@ -23,31 +23,31 @@ import java.util.Scanner;
  * @author Josefina Pugliese Vazquez
  */
 public class Main {
+
     public static final Scanner SCN
             = new Scanner(System.in, "Windows-1252")
                     .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
 
     public static void main(String[] args) {
-        
+
         final double CAMINO = 980;
-        
+
         double traslado;
         double jornadas;
-        
+
         try {
             System.out.print("Desplazamiento diario (km) ...: ");
             traslado = SCN.nextDouble();
-            
+
             jornadas = CAMINO / traslado;
-                        
-            System.out.printf("Días de Clases/Camino ........: %d%n", 
+
+            System.out.printf("Días de Clases/Camino ........: %d%n",
                     (int) jornadas < jornadas ? (int) jornadas + 1 : (int) jornadas);
-            
+
         } catch (Exception e) {
-            
+
             System.out.println("Error: Entrada incorrecta");
         }
-        
-        
+
     }
 }
